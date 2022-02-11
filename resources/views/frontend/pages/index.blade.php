@@ -1,11 +1,3 @@
-@extends('frontend.layouts.master')
-
-@section('title')
-One More Rep
-@endsection
-
-
-@section('content')
 @php
 $name = getSiteOption("site_name");
 $dc = getSiteOption("site_description");
@@ -32,6 +24,16 @@ $bgtestimonialimg = getHomeBgTestimonialImg();
 $sche = getHomeOption("schedule_day");
 
 @endphp
+
+@extends('frontend.layouts.master')
+
+@section('title')
+{{$name}}
+@endsection
+
+
+@section('content')
+
 
 <!-- ============ S-CROSSFIT-SLIDER ============ -->
 <section class="s-crossfit-slider">
