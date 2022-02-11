@@ -31,7 +31,7 @@ Programs Table
                     <div class="page-title">
                         <h4>Data Tables</h4>
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">One More Rep</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Warrior Fitness Gym</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
                             <li class="breadcrumb-item active">Programs Tables</li>
                         </ol>

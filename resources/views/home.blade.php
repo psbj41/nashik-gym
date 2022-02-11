@@ -16,7 +16,7 @@ Dashboard
                     <div class="page-title">
                         <h4>Dashboard</h4>
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">One More Rep</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Warrior Fitness Gym</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
@@ -336,7 +336,7 @@ Dashboard
                                     <div class="card-body">
                                         <div class="p-4" style="height: 300px;">
 
-                                                <h2 class="text-center">Please Contact One More Rep Gym Coordinators</h2>
+                                                <h2 class="text-center">Please Contact Warrior Fitness Gym Gym Coordinators</h2>
 
                                         </div>
 

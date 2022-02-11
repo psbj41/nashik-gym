@@ -64,7 +64,7 @@
     <div class="header-menu">
         <div class="container">
             <div class="header-logo">
-                <a href="/" class="logo"><img src="{{ $logo }}" alt="logo" width="1000px"></a>
+                <a href="/" class="logo"><img src="{{ $logo }}" alt="logo" width="125px"></a>
             </div>
             <nav class="nav-menu">
                 <ul class="nav-list">

@@ -18,7 +18,7 @@
                         <img src="{{ $logo }}" alt="" width="50px">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ $logo }}" alt="" width="200px">
+                        <img src="{{ $logo }}" alt="" width="70px">
                     </span>
                 </a>
             </div>
