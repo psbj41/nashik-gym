@@ -26,6 +26,7 @@ class SiteOptionController extends Controller
             'site_social_links',
             'site_address',
             'site_td',
+            'copyright_text',
         ];
 
         $this->saveSiteSettings($request, $options);
