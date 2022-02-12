@@ -87,8 +87,7 @@ Total Registration Create
                                 <div class="row mb-3">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="email" placeholder="email@onemorerep.com"
-                                            id="email" name="email">
+                                        <input class="form-control" type="email" id="email" name="email">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
