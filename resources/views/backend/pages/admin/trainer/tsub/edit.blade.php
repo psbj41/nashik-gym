@@ -32,7 +32,7 @@ Personal Trainer Subscription Edit
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="float-end d-none d-sm-block">
+                    <div class="float-end  d-sm-block">
                         <a href="{{ route('tsub.index') }}" class="btn btn-success">All Personal Trainer Subscriptions</a>
                     </div>
                 </div>

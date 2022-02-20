@@ -27,7 +27,7 @@ category Create
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="float-end d-none d-sm-block">
+                    <div class="float-end  d-sm-block">
                         <a href="{{ route('category.index') }}" class="btn btn-success">All categories</a>
                     </div>
                 </div>

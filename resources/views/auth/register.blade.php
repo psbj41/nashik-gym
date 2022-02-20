@@ -203,7 +203,7 @@ background-position: center;">
                         <div class="mt-5 text-center text-white">
                             <p>Already have an account ? <a href="{{route('login')}}" class="fw-bold text-white"> Login
                                 </a></p>
-                            <p>{!!$ct!!}<br> Developed by<a href="https://pratiksjadhav.com"><i class="mdi mdi-heart text-danger"></i> Pratik Jadhav</a>
+                            <p>{!!$ct!!}
                             </p>
                         </div>
                     </div>

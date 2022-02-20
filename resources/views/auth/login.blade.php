@@ -118,9 +118,7 @@ $ct = getSiteOption("copyright_text");
                         <div class="mt-5 text-center text-white">
                             <p>Don't have an account ?<a href="{{ route('register')}}" class="fw-bold text-white">
                                     Register</a> </p>
-                            <p>{!!$ct!!}</br> Developed by<a href="https://pratiksjadhav.com"><i
-                                        class="mdi mdi-heart text-danger"></i> Pratik Jadhav</a>
-                            </p>
+                            <p>{!!$ct!!}</p>
                         </div>
                     </div>
                 </div>

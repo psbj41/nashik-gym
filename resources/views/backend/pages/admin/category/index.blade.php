@@ -37,7 +37,7 @@ Category Table
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="float-end d-none d-sm-block">
+                    <div class="float-end  d-sm-block">
                         <a href="{{ route('category.create') }}" class="btn btn-success">Add New Category</a>
                     </div>
                 </div>

@@ -42,7 +42,7 @@ Subscriptions Table
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="float-end d-none d-sm-block">
+                    <div class="float-end  d-sm-block">
                         <a href="{{ route('subscription.create') }}" class="btn btn-success">Add New Subscription</a>
                     </div>
                 </div>
