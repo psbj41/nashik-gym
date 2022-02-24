@@ -72,6 +72,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('category.index') }}">Category Table</a></li>
                         <li><a href="{{ route('post.index') }}">Post Table</a></li>
+                        <li><a href="{{ route('video.index') }}">Videos</a></li>
                     </ul>
                 </li>
                 @endcan
@@ -164,9 +165,6 @@
                     </a>
                 </li>
                 @endcan
-
-
-
             </ul>
         </div>
         <!-- Sidebar -->

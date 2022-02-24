@@ -37,3 +37,6 @@ Route::get('/program/{program:slug}', "Frontend\PagesController@singleProgram")-
 
 //Trainer
 Route::get('/trainer/{trainer:slug}', "Frontend\PagesController@singleTrainer")->name('single-trainer');
+
+//Videos
+Route::get('/videos', 'Frontend\PagesController@video')->name('videos');

@@ -24,4 +24,8 @@ class Category extends Model
     {
         return $this->hasMany(Post::class);
     }
+
+    public function video(){
+        return $this->hasMany(Video::class);
+    }
 }

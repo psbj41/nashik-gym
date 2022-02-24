@@ -89,4 +89,7 @@ Route::get('/invoice/tsub/{tsub}', 'Admin\TsubController@invoice')->name('tsub.i
 Route::get('/ptmoney', 'Admin\PtmoneyController@index')->name('ptmoney.index');
 Route::delete('/ptmoney/{ptmoney}', 'Admin\PtmoneyController@destroy')->name('ptmoney.destroy');
 
+
+//Video
+Route::resource('/video', 'Admin\VideoController');
 });

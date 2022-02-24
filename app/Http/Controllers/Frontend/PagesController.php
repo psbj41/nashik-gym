@@ -6,6 +6,7 @@ use App\Contact;
 use App\Http\Controllers\Controller;
 use App\Program;
 use App\Trainer;
+use App\Video;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -59,5 +60,11 @@ class PagesController extends Controller
     public function sendSms()
     {
         return view('backend.pages.admin.message.send_sms');
+    }
+
+    public function video()
+    {
+        $videos = Video::latest()->paginate(2);
+        return view('frontend.pages.video',compact('videos'));
     }
 }

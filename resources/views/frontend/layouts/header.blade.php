@@ -73,6 +73,7 @@
                     <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
                     <li><a href="{{ route('blogs') }}">Blogs</a></li>
+                    <li><a href="{{ route('videos') }}">Videos</a></li>
                     <li><a href="{{ route('trainer') }}">Trainer</a></li>
                     @if (Route::has('login'))
 
