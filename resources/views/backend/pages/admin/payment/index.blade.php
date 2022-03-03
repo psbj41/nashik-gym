@@ -32,7 +32,10 @@ Payment Table
                 </div>
                 <div class="col-sm-6">
                     <div class="float-end  d-sm-block">
+                        @can('pay access')
+
                         <a href="{{ route('payment.create') }}" class="btn btn-success">Add Payment Option</a>
+                        @endcan
                     </div>
                 </div>
             </div>
@@ -63,7 +66,7 @@ Payment Table
                                                 src="{{ $item->qrimg }}" width="1000">
                                         </a>
                                         <p class="mt-2 mb-0 text-muted">{{ $item->account_holder_name }}</p>
-                                        @can('authentication access')
+                                        @can('pay access')
                                         <p>
                                             <form action="{{ route('payment.destroy',[$item->id]) }}" method="POST">
                                                 @csrf
