@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +27,5 @@ Route::get('/schedule', function(){
     return view('backend.pages.trainer.schedule.index');
 });
 
-Route::get('/migrate', function() {
-    Artisan::call('migrate');
-    return 'The links have been created.';
-});
 
 require 'frontend.php';

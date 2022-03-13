@@ -70,18 +70,18 @@ Workout Table
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th>Workout Name</th>
-                                        <th>Workouts</th>
+                                        <th>User Name</th>
+                                        <th>Workouts Assign To User</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($workouts as $item)
                                     <tr>
-                                        <td>{{ $item->name }}</td>
+                                        <td style="font-size: 30px">{{ $item->name }}</td>
                                         <td>
                                             <ul>
                                                 @foreach ($item->workouts as $item)
-                                                <li>{{$item->name}}</li>
+                                                <li style="font-size: 20px">{{strToUpper($item->name)}}</li>
                                                 @endforeach
                                             </ul>
                                         </td>
