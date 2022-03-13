@@ -79,4 +79,8 @@ class User extends Authenticatable implements HasMedia
         return $this->hasMany(Tsub::class);
     }
 
+    public function workouts()
+    {
+        return $this->belongsToMany(Workout::class);
+    }
 }

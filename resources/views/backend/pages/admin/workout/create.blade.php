@@ -1,8 +1,9 @@
-@can('authentication access')
+@can('blogs access')
+
 @extends('backend.layouts.master')
 
 @section('title')
-Assign Permission
+workout Create
 @endsection
 
 @section('css')
@@ -21,13 +22,13 @@ Assign Permission
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Warrior Fitness Gym</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                            <li class="breadcrumb-item active">Assign Permission Form</li>
+                            <li class="breadcrumb-item active">workout Create Form</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="float-end  d-sm-block">
-                        <a href="{{ route('role.index') }}" class="btn btn-success">All roles</a>
+                        <a href="{{ route('workout.index') }}" class="btn btn-success">All workouts</a>
                     </div>
                 </div>
             </div>
@@ -41,25 +42,21 @@ Assign Permission
         <div class="page-content-wrapper">
 
             <div class="row">
-                <div class="col-sm-6 ">
-                    <div class="card ">
+                <div class="col-12">
+                    <div class="card">
                         <div class="card-body">
                             @include('backend.layouts.errors')
-                            <form action="{{ route('assign.permission.store',[$role->id])}}" method="post">
+                            <form action="{{route('workout.store')}}" method="post">
                                 @csrf
-                                @foreach ($permissions as $item)
-                                <div class="form-check form-switch mb-3" dir="ltr" style="font-size: 20px">
-                                    <input type="checkbox" class="form-check-input" id="permission[{{$item->id}}]"
-                                        name="permission[]" value="{{$item->id}}"
-                                        @if($role->hasPermissionTo($item->id)) checked @endif>
-                                    <label class="form-check"
-                                        for="permission[{{$item->id}}]">{{ strtoupper($item->name) }}</label>
+                                <div class="row mb-3">
+                                    <label for="name" class="col-sm-2 col-form-label">workout Name</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" placeholder="add form" name="name"
+                                            id="name" required>
+                                    </div>
                                 </div>
-                                @endforeach
                                 <div class="col-sm-12">
-                                    <button type="submit"
-                                        class="form-control btn btn-danger waves-effect waves-light">Assign Permission
-                                        To {{ strtoupper($role->name) }}</button>
+                                    <button type="submit" class="form-control btn btn-danger waves-effect waves-light">Submit the Form</button>
                                 </div>
                             </form>
 
