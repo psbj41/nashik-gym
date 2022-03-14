@@ -11,7 +11,7 @@
         <div class="card">
             <div class="card-body">
 
-                <div style="display: flex; justify-content:center; allign-item:center; margine-bottom:20px; padding:10px">
+                <div style=" justify-content:center; allign-item:center; margine-bottom:20px; padding:20px">
                     <h4 class="card-title">All Expenses</h4>
                     <a href="{{route('expense.create')}}" class="btn btn-primary" style="margin-left:auto">Add New Expense</a>
                 </div>

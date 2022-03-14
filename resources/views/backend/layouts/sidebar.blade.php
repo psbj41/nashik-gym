@@ -49,6 +49,17 @@
                         <li><a href="{{ route('permission.index') }}">Permission Table</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-money-bill-alt"></i>
+                        <span>Daily Expenses</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('expense.index') }}">Expenses</a></li>
+
+                    </ul>
+                </li>
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

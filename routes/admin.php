@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//expense
+Route::resource('/expense', 'Admin\ExpenseController');
 
 Route::group(['middleware'=>['auth'], 'prefix'=>'dashboard'],function(){
 
@@ -93,8 +95,7 @@ Route::delete('/ptmoney/{ptmoney}', 'Admin\PtmoneyController@destroy')->name('pt
 //Video
 Route::resource('/video', 'Admin\VideoController');
 
-//expense
-Route::resource('/expense', 'Admin\ExpenseController');
+
 
 //Workout
 Route::resource('workout', 'Admin\WorkoutController');
