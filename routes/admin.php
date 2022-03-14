@@ -93,6 +93,9 @@ Route::delete('/ptmoney/{ptmoney}', 'Admin\PtmoneyController@destroy')->name('pt
 //Video
 Route::resource('/video', 'Admin\VideoController');
 
+//expense
+Route::resource('/expense', 'Admin\ExpenseController');
+
 //Workout
 Route::resource('workout', 'Admin\WorkoutController');
 Route::get('assign', 'Admin\WorkoutController@assignView')->name('assign.workout.index');
