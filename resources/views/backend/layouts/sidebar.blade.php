@@ -183,6 +183,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('workout.index') }}">Workouts</a></li>
+                        <li><a href="{{ route('subworkout.index') }}">Sub-Workout</a></li>
                         <li><a href="{{ route('assign.workout.index') }}">Workout-Client</a></li>
                     </ul>
                 </li>

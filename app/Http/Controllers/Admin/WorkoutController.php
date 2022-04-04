@@ -96,6 +96,7 @@ class WorkoutController extends Controller
         $workouts = User::all();
         return view('backend.pages.admin.workout.workout-index',compact(['workouts']));
     }
+    
 
     public function assign()
     {

@@ -78,10 +78,18 @@ Workout Table
                                     @foreach ($workouts as $item)
                                     <tr>
                                         <td style="font-size: 30px">{{ $item->name }}</td>
+
                                         <td>
                                             <ul>
-                                                @foreach ($item->workouts as $item)
-                                                <li style="font-size: 20px">{{strToUpper($item->name)}}</li>
+                                                @foreach ($item->workouts as $item2)
+
+                                                <li style="font-size: 20px">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">{{strToUpper($item2->name)}}</button>
+                                                    <br>
+                                                    @foreach ($item2->SubWorkout as $item3)
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">{{strToUpper($item3->name)}}</button>
+                                                    @endforeach
+                                                </li>
                                                 @endforeach
                                             </ul>
                                         </td>
@@ -121,6 +129,7 @@ Workout Table
 
 <!-- Datatable init js -->
 <script src="{{ asset('backend/js/pages/datatables.init.js') }}"></script>
+
 @endsection
 
 @endcan

@@ -99,4 +99,7 @@ Route::get('assign', 'Admin\WorkoutController@assignView')->name('assign.workout
 Route::get('assign/create', 'Admin\WorkoutController@assign')->name('assign.workout');
 Route::post('assign/create', 'Admin\WorkoutController@assignStore')->name('workout.assign.store');
 Route::get('assign/{user:id}', 'Admin\WorkoutController@assignMyView')->name('my.assign.workout.index');
+
+//Sub Workout
+Route::resource('subworkout', 'SubWorkoutController');
 });

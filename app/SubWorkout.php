@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Workout extends Model
+class SubWorkout extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -13,10 +13,11 @@ class Workout extends Model
      */
     protected $fillable = [
         'name',
+        'workout_id',
     ];
 
-    public function SubWorkout()
+    public function workout()
     {
-        return $this->hasMany(SubWorkout::class);
+        return $this->belongsTo(Workout::class);
     }
 }

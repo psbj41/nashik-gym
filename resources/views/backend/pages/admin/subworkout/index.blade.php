@@ -3,7 +3,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-Workout Table
+Sub-Workout Table
 @endsection
 
 
@@ -32,13 +32,13 @@ Workout Table
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Warrior Fitness Gym</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                            <li class="breadcrumb-item active">Workout Tables</li>
+                            <li class="breadcrumb-item active">Sub-Workout Tables</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="float-end  d-sm-block">
-                        <a href="{{ route('workout.create') }}" class="btn btn-success">Add New Workout</a>
+                        <a href="{{ route('subworkout.create') }}" class="btn btn-success">Add New Sub-Workout</a>
                     </div>
                 </div>
             </div>
@@ -70,60 +70,28 @@ Workout Table
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th>Workout Name</th>
-                                        <th>Workouts</th>
+                                        <th>Sub-Workout Name</th>
+                                        <th>Sub-Workout Category</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($workouts as $item)
+                                    @foreach ($subworkout as $item)
                                     <tr>
                                         <td>{{ $item->name }}</td>
-                                        <td>
-                                            <ul>
-                                                @foreach ($item->workouts as $item)
-                                                <li>
-                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">{{strToUpper($item->name)}}</button>
-                                                </li>
-                                                @endforeach
-                                            </ul>
-                                        </td>
+                                        <td>{{ $item->workout->name }}</td>
                                         <td id="tooltip-container0" class="d-flex">
-                                            <a href="{{ route('assign.workout') }}" class="me-3 text-primary" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
-                                            <form action="{{ route('workout.destroy',[$item->id]) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
+                                                <a href="{{ route('subworkout.edit',[$item->id]) }}" class="me-3 text-primary" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                                <form action="{{ route('subworkout.destroy',[$item->id]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
                                                 <button style="padding: 0; border:none; background:none; " type="submit" class="text-danger" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></button>
-                                            </form>
+                                                </form>
                                         </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{-- <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title mt-0" id="exampleModalScrollableTitle">Sub Workout Name</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>
-                                                @foreach ($item->SubWorkout as $item2)
-                                                {{$item2->name}}
-                                                <br>
-                                                @endforeach
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- /.modal --> --}}
                         </div>
                     </div>
                 </div> <!-- end col -->
@@ -156,7 +124,6 @@ Workout Table
 
 <!-- Datatable init js -->
 <script src="{{ asset('backend/js/pages/datatables.init.js') }}"></script>
-
 @endsection
 
 @endcan
