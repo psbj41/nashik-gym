@@ -76,7 +76,7 @@
 
                 @can('pay option access')
                 <li>
-                    <a href="{{ route('my.assign.workout.index',[Auth::user()->id]) }}" class=" waves-effect">
+                    <a href="{{ route('my.assign.workout.index') }}" class=" waves-effect">
                         <i class="dripicons-rocket"></i>
                         <span>My Workout</span>
                     </a>
@@ -188,17 +188,19 @@
 
                 @can('authentication access')
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="{{ route('workout.index') }}" class=" waves-effect">
                         <i class="dripicons-gear"></i>
-                        <span>Workout</span>
+                        <span>Workouts List</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('workout.index') }}">Workouts</a></li>
-                        <li><a href="{{ route('subworkout.index') }}">Sub-Workout</a></li>
-                        <li><a href="{{ route('assign.workout.index') }}">Workout-Client</a></li>
-                    </ul>
                 </li>
                 @endcan
+
+                <li>
+                    <a href="{{ route('daywise.index') }}" class=" waves-effect">
+                        <i class="dripicons-rocket"></i>
+                        <span>Time Table for User</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

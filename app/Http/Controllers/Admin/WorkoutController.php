@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Daywise;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Workout;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class WorkoutController extends Controller
@@ -96,7 +98,7 @@ class WorkoutController extends Controller
         $workouts = User::all();
         return view('backend.pages.admin.workout.workout-index',compact(['workouts']));
     }
-    
+
 
     public function assign()
     {
@@ -119,10 +121,9 @@ class WorkoutController extends Controller
         return redirect()->route('assign.workout.index')->with('success', "Workout Assign to User Successfully");
     }
 
-    public function assignMyView(User $user)
+    public function assignMyView()
     {
-        $workouts = User::where('id',"=",$user->id)->get();
-        // Log::info($workouts);
+        $workouts = Daywise::where('user_id', '=', Auth::user()->id)->get();
         return view('backend.pages.admin.workout.myw',compact(['workouts']));
     }
 }

@@ -1,9 +1,9 @@
-@can('pay option access')
+@can('authentication access')
 
 @extends('backend.layouts.master')
 
 @section('title')
-Workout Table
+Daywise Table
 @endsection
 
 
@@ -32,13 +32,13 @@ Workout Table
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Warrior Fitness Gym</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                            <li class="breadcrumb-item active">Workout Tables</li>
+                            <li class="breadcrumb-item active">Daywise Tables</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="float-end  d-sm-block">
-                        <a href="{{ route('workout.create') }}" class="btn btn-success">Add New Workout</a>
+                        <a href="{{ route('daywise.create') }}" class="btn btn-success">Add New Daywise</a>
                     </div>
                 </div>
             </div>
@@ -70,70 +70,81 @@ Workout Table
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
+                                        <th>User Name</th>
                                         <th>Monday</th>
                                         <th>Tuesday</th>
-                                        <th>Wednesday</th>
+                                        <th>Wedesday</th>
                                         <th>Thursday</th>
                                         <th>Friday</th>
                                         <th>Saturday</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($workouts as $item)
+                                    @foreach ($daywise as $item)
                                     <tr>
+                                        <td>{{ $item->user->name }}</td>
                                         <td>
                                             @if ($item->mon == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->mon) as $mon)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($mon)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($mon)}}</a><br>
                                             @endforeach
                                             @endif
                                         </td>
                                         <td>
                                             @if ($item->tue == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->tue) as $tue)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($tue)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($tue)}}</a><br>
                                             @endforeach
                                             @endif
                                         </td>
                                         <td>
                                             @if ($item->wed == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->wed) as $wed)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($wed)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($wed)}}</a><br>
                                             @endforeach
                                             @endif
                                         </td>
                                         <td>
                                             @if ($item->thu == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->thu) as $thu)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($thu)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($thu)}}</a><br>
                                             @endforeach
                                             @endif
                                         </td>
                                         <td>
                                             @if ($item->fri == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->fri) as $fri)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($fri)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($fri)}}</a><br>
                                             @endforeach
                                             @endif
                                         </td>
                                         <td>
                                             @if ($item->sat == 'null')
-                                            <a class="btn btn-success">No Workout</a>
+                                            <a class="btn btn-primary">No Workout</a>
                                             @else
                                             @foreach (json_decode($item->sat) as $sat)
-                                            <a class="btn btn-success" style="margin: 5px 0px">{{strtoupper($sat)}}</a><br>
+                                            <a class="btn btn-primary">{{strtoupper($sat)}}</a><br>
                                             @endforeach
                                             @endif
+                                        </td>
+                                        <td id="tooltip-container0" class="d-flex">
+                                                <a href="{{ route('daywise.edit',[$item->id]) }}" class="me-3 text-primary" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                                <form action="{{ route('daywise.destroy',[$item->id]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                <button style="padding: 0; border:none; background:none; " type="submit" class="text-danger" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></button>
+                                                </form>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -171,7 +182,6 @@ Workout Table
 
 <!-- Datatable init js -->
 <script src="{{ asset('backend/js/pages/datatables.init.js') }}"></script>
-
 @endsection
 
 @endcan

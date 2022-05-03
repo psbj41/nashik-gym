@@ -83,4 +83,14 @@ class User extends Authenticatable implements HasMedia
     {
         return $this->belongsToMany(Workout::class);
     }
+
+    public function timetable()
+    {
+        return $this->hasMany(Timetable::class);
+    }
+
+    public function daywise()
+    {
+        return $this->hasMany(Daywise::class);
+    }
 }
