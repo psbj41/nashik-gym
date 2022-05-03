@@ -49,10 +49,10 @@ Workout Table
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div>
-                            <p>{{Auth::user()->name}} Daily Workout Chart</p>
-                        </div>
                         <div class="card-body">
+                            <div>
+                                <h4 class="text-center">{{Auth::user()->name}} Daily Workout Chart</h4>
+                            </div>
                             @if (session('success'))
 
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
