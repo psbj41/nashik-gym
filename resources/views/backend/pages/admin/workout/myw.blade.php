@@ -36,11 +36,6 @@ Workout Table
                         </ol>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="float-end  d-sm-block">
-                        <a href="{{ route('workout.create') }}" class="btn btn-success">Add New Workout</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -54,6 +49,9 @@ Workout Table
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        <div>
+                            <p>{{Auth::user()->name}} Daily Workout Chart</p>
+                        </div>
                         <div class="card-body">
                             @if (session('success'))
 

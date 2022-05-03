@@ -78,7 +78,7 @@ Daywise Create
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">Monday</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Tuesday</label>
                                     <div class="col-sm-10">
                                         <select class="select2 form-control select2-multiple" multiple="multiple"
                                             data-placeholder="Choose ..." name="tue[]">
@@ -89,7 +89,7 @@ Daywise Create
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">Monday</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Wednesday</label>
                                     <div class="col-sm-10">
                                         <select class="select2 form-control select2-multiple" multiple="multiple"
                                             data-placeholder="Choose ..." name="wed[]">
@@ -100,7 +100,7 @@ Daywise Create
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">Monday</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Thursday</label>
                                     <div class="col-sm-10">
                                         <select class="select2 form-control select2-multiple" multiple="multiple"
                                             data-placeholder="Choose ..." name="thu[]">
@@ -111,7 +111,7 @@ Daywise Create
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">Monday</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Friday</label>
                                     <div class="col-sm-10">
                                         <select class="select2 form-control select2-multiple" multiple="multiple"
                                             data-placeholder="Choose ..." name="fri[]">
@@ -122,7 +122,7 @@ Daywise Create
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">Monday</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Saturday</label>
                                     <div class="col-sm-10">
                                         <select class="select2 form-control select2-multiple" multiple="multiple"
                                             data-placeholder="Choose ..." name="sat[]">
